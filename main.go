@@ -1,6 +1,6 @@
 package main
 
-import "users/httpengine"
+import "profiles/httpengine"
 
 func main() {
 	httpServer := httpengine.NewHTTPEngine("v1.0")
