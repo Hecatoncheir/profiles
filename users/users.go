@@ -26,7 +26,7 @@ func (user *User) Create() error {
 	return err
 }
 
-// Update need for delete user
+// Update need for update user
 func (user *User) Update() (*User, error) {
 	updatedUser, err := updateUser(user)
 	if err != nil {
