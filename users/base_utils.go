@@ -29,6 +29,11 @@ func checkDataBase(databaseNameForCheck string, session rethink.QueryExecutor) e
 		if err != nil {
 			return err
 		}
+
+		_, err = rethink.Table("Users").IndexCreate("Email").Run(userDataBaseSession)
+		if err != nil {
+			log.Fatalln(err.Error())
+		}
 	}
 
 	return nil

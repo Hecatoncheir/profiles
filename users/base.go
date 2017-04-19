@@ -36,11 +36,6 @@ func init() {
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
-
-	_, err = rethink.Table("Users").IndexCreate("Email").Run(userDataBaseSession)
-	if err != nil {
-		log.Fatalln(err.Error())
-	}
 }
 
 // GetUserByID return user from database
