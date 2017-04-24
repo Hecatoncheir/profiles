@@ -16,7 +16,7 @@ type User struct {
 // NewUser is a constructor for User
 func NewUser(email string, password string) (*User, error) {
 	id := uuid.NewV4().String()
-	user := User{ID: id, Email: email, Password: password}
+	user := User{ID: id, Email: email, Password: password, Groups: []string{}}
 	return &user, nil
 }
 
